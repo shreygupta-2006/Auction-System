@@ -5,13 +5,11 @@ public class Bidder {
     public String phone;
     String mail;
     public String token;
+    public String id;
 
     public Bidder(String name, String phone, String mail){
         this.name=name;
         this.phone=phone;
         this.mail=mail;
-    }
-    public Bidder(){
-
     }
 }

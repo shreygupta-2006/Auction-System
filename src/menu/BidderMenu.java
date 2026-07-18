@@ -1,5 +1,6 @@
 package menu;
 import  model.Bidder;
+import token.IDGenerate;
 import token.TokenGenerate;
 
 import java.util.ArrayList;
@@ -33,8 +34,8 @@ public class BidderMenu implements Menu{
             Bidder bidder=new Bidder(name, phone, mail);
 
             bidderList.add(bidder);
-            TokenGenerate tokenGenerate=new TokenGenerate();
-            tokenGenerate.generateToken(bidder);
+            TokenGenerate.generateToken(bidder);
+            IDGenerate.generateID(bidder);
             System.out.println("""
                     --------------------------------------------
                     Registration Successful !!!!
@@ -42,6 +43,7 @@ public class BidderMenu implements Menu{
             System.out.println("Name: "+bidder.name);
             System.out.println("Phone Number: "+maskedPhone);
             System.out.println("Token: "+bidder.token);
+            System.out.println("Bidder ID: "+bidder.id);
             System.out.println("--------------------------------------------");
         }
     }

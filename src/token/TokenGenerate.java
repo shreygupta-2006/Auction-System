@@ -6,9 +6,8 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class TokenGenerate {
-    Random random = new Random();
-    HashMap<String,String> hm = new HashMap<>();
-    public void generateToken(Bidder bidder){
+    static HashMap<String,String> hm = new HashMap<>();
+    static public void generateToken(Bidder bidder){
         LocalDateTime now= LocalDateTime.now();
         DateTimeFormatter dtm=DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSSS");
         String time = dtm.format(now);
